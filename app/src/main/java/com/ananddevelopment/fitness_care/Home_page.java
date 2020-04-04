@@ -11,9 +11,6 @@ public class Home_page extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
     }
 
-    public void testDemoMethod()
-    {
-        //just for testing
-    }
+  
 
 }
