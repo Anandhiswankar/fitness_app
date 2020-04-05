@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Fitness_care</string>
     <string name="s">Snap Scren</string>
+    <string name="imageview" />
 </resources>
