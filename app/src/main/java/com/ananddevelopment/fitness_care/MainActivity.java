@@ -14,7 +14,7 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-    private static  final int splash=2000;
+    private static  final int splash=3000;
 
 
     @Override
