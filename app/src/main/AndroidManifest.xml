@@ -6,12 +6,20 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/Fitness_Care"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home_page"></activity>
-        <activity android:name=".MainActivity"
+        <activity android:name=".myInfo"></activity>
+        <activity android:name=".addNotes" />
+        <activity android:name=".diet" />
+        <activity android:name=".reminder" />
+        <activity android:name=".workout" />
+        <activity android:name=".exercise" />
+        <activity android:name=".about" />
+        <activity android:name=".Home_page" />
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>

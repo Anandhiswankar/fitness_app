@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">Fitness_care</string>
+    <string name="Fitness_Care">Fitness_care</string>
     <string name="s">Snap Scren</string>
     <string name="imageview" />
+    <string name="my_workout">My Workout</string>
+    <string name="diet_plans">Diet Plans</string>
+    <string name="about">About</string>
+    <string name="reminders">Reminders</string>
+    <string name="exercises_yoga_etc">Exercises(Yoga etc..)</string>
+    <string name="textview">textview</string>
+
 </resources>
