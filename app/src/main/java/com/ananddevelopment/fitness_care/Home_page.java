@@ -22,35 +22,42 @@ public class Home_page extends AppCompatActivity {
         ivWork.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Home_page.this,workout.class);
-                startActivity(intent);
+                try {
+                    Intent intent=new Intent(Home_page.this,workout.class);
+                    startActivity(intent);
+                }
+                catch (Exception err)
+                {
+                    err.printStackTrace();
+                }
+
             }
         });
         ivexercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Home_page.this,exercise.class);
-                startActivity(intent);
+                //Intent intent=new Intent(Home_page.this,exercise.class);
+                //startActivity(intent);
             }
         });
         ivRemind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Home_page.this,reminder.class);
-                startActivity(intent);
+               // Intent intent=new Intent(Home_page.this,reminder.class);
+                //startActivity(intent);
             }
         });
         ivDiet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Home_page.this,diet.class);
-                startActivity(intent);
+               // Intent intent=new Intent(Home_page.this,diet.class);
+                //startActivity(intent);
             }
         });ivAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Home_page.this,about.class);
-                startActivity(intent);
+                //Intent intent=new Intent(Home_page.this,about.class);
+                //startActivity(intent);
             }
         });
 
@@ -58,6 +65,13 @@ public class Home_page extends AppCompatActivity {
 
 
 
+    }
+
+
+    public void onBackPressed()
+    {
+        finish();
+        super.onBackPressed();
     }
 
 

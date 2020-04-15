@@ -2,18 +2,18 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/bgnew"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".workout">
+    android:background="@android:color/background_light"
+    >
 
     <ImageView
         android:id="@+id/ivaddNotes"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/frame2"
         android:contentDescription=""
+        android:scaleType="fitXY"
+
         app:layout_constraintBottom_toTopOf="@+id/ivInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.423"
@@ -43,9 +43,9 @@
         android:id="@+id/ivInfo"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/frame2"
         android:contentDescription=""
+        android:scaleType="fitXY"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.423"
