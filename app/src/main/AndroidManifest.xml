@@ -13,6 +13,7 @@
 
         <activity android:name=".workout" />
 
+        <activity android:name=".add_note" />
 
         <activity android:name=".Home_page"
             android:screenOrientation="portrait"
