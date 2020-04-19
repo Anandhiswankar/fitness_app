@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 public class Home_page extends AppCompatActivity {
     ImageView ivWork,ivexercise,ivAbout,ivRemind,ivDiet;
+    DataBaseHelper dbh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class Home_page extends AppCompatActivity {
                 try {
                     Intent intent=new Intent(Home_page.this,add_note.class);
                     startActivity(intent);
+
                 }
                 catch (Exception err)
                 {
