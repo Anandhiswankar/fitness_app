@@ -44,7 +44,7 @@ public class add_note extends AppCompatActivity {
                 stringBuffer.append("\n");
             }
             note_box.setText(stringBuffer.toString());
-            Toast.makeText(this,"Previous Task",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Loading..",Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(this,"No History",Toast.LENGTH_SHORT).show();
         }
@@ -60,7 +60,7 @@ public class add_note extends AppCompatActivity {
         Boolean result= dbh.updateData(id, task);
         if(result==true)
             if (dbh.updateData(id, task)) {
-                Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Something Wrong", Toast.LENGTH_SHORT).show();
             }

@@ -24,7 +24,7 @@ public class Home_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    Intent intent=new Intent(Home_page.this,add_note.class);
+                    Intent intent=new Intent(Home_page.this,workout.class);
                     startActivity(intent);
 
                 }
