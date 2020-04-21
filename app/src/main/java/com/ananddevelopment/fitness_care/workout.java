@@ -10,7 +10,7 @@ package com.ananddevelopment.fitness_care;
 public class workout extends AppCompatActivity {
 
 
-    Button add_note;
+    Button add_note,my_health;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class workout extends AppCompatActivity {
 
         add_note = (Button) findViewById(R.id.goto_add_note);
 
+        my_health = (Button) findViewById(R.id.My_health_btn);
 
         add_note.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +30,15 @@ public class workout extends AppCompatActivity {
 
             }
         });
+
+        my_health.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(workout.this,my_profile.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
