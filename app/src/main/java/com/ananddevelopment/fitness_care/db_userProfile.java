@@ -24,22 +24,23 @@ public class db_userProfile extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table user_data (id integer primary key autoincrement,Name Text,Age integer,Height integer,Weight integer,Gender text)");
+        db.execSQL("create table user_data (id integer primary key autoincrement,Name Text,Gender text,Age integer,Weight integer,Height integer)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists "+table);
     }
-    public Boolean insertData(int id, String Name, String Gender,String Age, String Height, String Weight)
+    public Boolean insertData(int id, String Name, String Gender,String Age, String Weight, String Height)
     {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
         cv.put(col2,Name);
         cv.put(col3,Gender);
         cv.put(col4,Age);
-        cv.put(col5,Height);
-        cv.put(col6,Weight);
+        cv.put(col5,Weight);
+        cv.put(col6,Height);
+
         db.execSQL("delete from user_data");
 
         long res=db.insert(table,null,cv);

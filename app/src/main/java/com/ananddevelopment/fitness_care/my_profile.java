@@ -94,9 +94,9 @@ public class my_profile extends AppCompatActivity {
             return;
         }
         int id = userProfileDb.getData().getColumnIndex("id");
-        Boolean result = userProfileDb.insertData(id, Name,Gender, Age, Height, Weight);
+        Boolean result = userProfileDb.insertData(id, Name,Gender, Age,Weight,Height);
         if (result == true)
-            if (userProfileDb.insertData(id, Name, Age, Height, Weight, Gender)) {
+            if (userProfileDb.insertData(id, Name,Gender, Age,Weight,Height)) {
                 Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Something Wrong", Toast.LENGTH_SHORT).show();
