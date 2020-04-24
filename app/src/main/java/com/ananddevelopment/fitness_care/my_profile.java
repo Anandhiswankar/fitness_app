@@ -53,10 +53,10 @@ public class my_profile extends AppCompatActivity {
                U_gender.setText(Gender);
                String Age=cursor.getString(3);
                U_age.setText(Age);
-               String Weight=cursor.getString(4);
+              String Weight=cursor.getString(4);
                U_weight.setText(Weight);
-               String Height=cursor.getString(5);
-              U_height.setText(Height);
+               String Height =cursor.getString(5);
+               U_height.setText(Height);
 
 
            }
@@ -94,9 +94,9 @@ public class my_profile extends AppCompatActivity {
             return;
         }
         int id = userProfileDb.getData().getColumnIndex("id");
-        Boolean result = userProfileDb.insertData(id, Name,Gender, Age,Weight,Height);
+        Boolean result = userProfileDb.insertData(id, Name, Gender, Age, Weight, Height);
         if (result == true)
-            if (userProfileDb.insertData(id, Name,Gender, Age,Weight,Height)) {
+            if (userProfileDb.insertData(id, Name, Gender, Age, Weight, Height)) {
                 Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Something Wrong", Toast.LENGTH_SHORT).show();
