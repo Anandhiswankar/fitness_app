@@ -18,21 +18,49 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="yoga_text">\nYoga is an ancient physical\n
- and spiritual discipline and
- branch of philosophy that
- originated in India reportedly
- more than 5,000 years ago.
- The word yoga comes from
- the Sanskrit word yuj, which
- means to yoke, join, or unite.
- The Iyengar school of yoga
-defines yuj as the "joining or
- integrating of all aspects of
-the individual - body with mind
- and mind with soul - to achieve
- a happy, balanced and useful
- life.\n"</string>
-    <string name="cardio_text">a \n a \n aa \n a \n aa \n a \n aa \n a \n aa \n a \n a</string>
-    <string name="zumba_text">a \n a \n aa \n a \n aa \n a \n aa \n a \n aa \n a \n a</string>
+         and spiritual discipline and
+         branch of philosophy that
+         originated in India reportedly
+         more than 5,000 years ago.
+         The word yoga comes from
+         the Sanskrit word yuj, which
+         means to yoke, join, or unite.\n\n\t
+        Yoga is an old discipline from India. It is both spiritual and physical.
+        Yoga uses breathing techniques, exercise and meditation.
+        It helps to improve health and happiness.\n \t\t Yoga is a systematic practice of physical
+        exercise, breath control, relaxation, diet control, and positive thinking
+        and meditation aimed at developing harmony in the body, mind, and environment.\n"</string>
+            <string name="cardio_text">
+
+                 Cardio exercise is any exercise that
+                raises your heart rate. Face it our bodies
+                were made to move.And we all know that to
+                keep our muscles in shape we need move them.
+                This movement makes them stronger
+                and stronger muscles make for a more efficient
+                and healthy body. \n\n \t Your heart is a muscle.
+                Therefore working it makes it stronger.
+                A stronger cardio-vascular system means more
+                capillaries delivering more oxygen to cells in your muscles.
+                This enables your cells to burn more fat during both exercise and inactivity.
+               \n\n\t Cardio exercise uses large muscle movement over
+                a sustained period of time keeping your heart rate
+                to at least 50% of its maximum level.</string>
+
+    <string name="zumba_text">
+        Zumba is a popular fitness program inspired by Latin dance.
+        The word "Zumba" comes from a Colombian word that means
+        to move fast and have fun, which is just how people describe
+        the routine. Using upbeat Latin music
+        together with cardiovascular exercise, Zumba is aerobic dancing that
+        is lots of fun and easy to learn. \n\n \t Zumba seems to be an optimal fitness choice,
+        mixing cardio intervals with resistance training. Many experts believe that an interval/resistance
+        combination maximizes caloric output, fat burning, and total body toning. Zumba mixes effective body
+        sculpting movements with easy-to-follow, fun dance steps. People seem to forget about working
+        out during a Zumba session, allowing them to exercise longer, and burn even more calories.
+        \n\n\t A typical Zumba session lasts about an hour and incorporates several dance styles, including cumbia,
+        merengue, salsa, reggaeton, mambo, rumba, flamenco, and calypso and Salsaton. The Latin music
+        includes both fast and slow rhythms, allowing for a great cardio workout as well as body sculpting exercises.
+        Depending on the instructor, you may even get a taste of belly dancing or hip-hop dancing, too.</string>
 
 </resources>
