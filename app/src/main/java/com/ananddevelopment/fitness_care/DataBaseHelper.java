@@ -28,6 +28,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
     public boolean updateData(int id,String task) {
         SQLiteDatabase db = this.getWritableDatabase();
+
         ContentValues cv = new ContentValues();
             cv.put(col2, task);
             db.execSQL("delete from data");

@@ -38,8 +38,8 @@ public class Home_page extends AppCompatActivity {
         ivexercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent=new Intent(Home_page.this,exercise.class);
-                //startActivity(intent);
+                Intent intent=new Intent(Home_page.this,exercise.class);
+                startActivity(intent);
             }
         });
         ivRemind.setOnClickListener(new View.OnClickListener() {
