@@ -8,5 +8,31 @@
     <string name="reminders">Reminders</string>
     <string name="exercises_yoga_etc">Exercises(Yoga etc..)</string>
     <string name="textview">textview</string>
+    <string name="title_activity_yoga_exe">yoga_exe</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="yoga_text">\nYoga is an ancient physical\n
+ and spiritual discipline and
+ branch of philosophy that
+ originated in India reportedly
+ more than 5,000 years ago.
+ The word yoga comes from
+ the Sanskrit word yuj, which
+ means to yoke, join, or unite.
+ The Iyengar school of yoga
+defines yuj as the "joining or
+ integrating of all aspects of
+the individual - body with mind
+ and mind with soul - to achieve
+ a happy, balanced and useful
+ life.\n"</string>
+    <string name="cardio_text">a \n a \n aa \n a \n aa \n a \n aa \n a \n aa \n a \n a</string>
+    <string name="zumba_text">a \n a \n aa \n a \n aa \n a \n aa \n a \n aa \n a \n a</string>
 
 </resources>
