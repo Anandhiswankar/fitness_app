@@ -8,126 +8,97 @@
     tools:context=".Home_page">
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <android.support.constraint.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/ivWork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="142dp"
+                    android:layout_gravity="center"
 
 
-                    <ImageView
-                        android:id="@+id/ivWork"
-                        android:layout_width="364dp"
-                        android:layout_height="142dp"
-                        android:layout_marginTop="16dp"
-                        android:padding="15dp"
-
-
-                        android:scaleType="fitXY"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.489"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/my_workout_btn" />
-
-                    <ImageView
-                        android:id="@+id/ivexercise"
-                        android:layout_width="366dp"
-                        android:layout_height="142dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:padding="15dp"
-                        android:scaleType="fitXY"
-
-
-                        app:layout_constraintBottom_toTopOf="@+id/ivRemind"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.493"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/ivWork"
-                        app:srcCompat="@drawable/exercises_btn" />
-
-
-                    <ImageView
-                        android:id="@+id/ivRemind"
-                        android:layout_width="wrap_content"
-                        android:layout_height="142dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:padding="15dp"
-                        android:scaleType="fitXY"
-
-
-                        app:layout_constraintBottom_toTopOf="@+id/ivDiet"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.495"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/ivexercise"
-                        app:srcCompat="@drawable/reminders_btn" />
-
-                    <ImageView
-                        android:id="@+id/ivDiet"
-                        android:layout_width="wrap_content"
-                        android:layout_height="142dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:padding="15dp"
-                        android:scaleType="fitXY"
-
-
-                        app:layout_constraintBottom_toTopOf="@+id/ivAbout"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.49"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/ivRemind"
-                        app:srcCompat="@drawable/diet_plan_btn" />
-
-                    <ImageView
-                        android:id="@+id/ivAbout"
-                        android:layout_width="wrap_content"
-                        android:layout_height="142dp"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:padding="15dp"
-                        android:scaleType="fitXY"
-
-
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.333"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/ivDiet"
-                        app:srcCompat="@drawable/about_btn" />
-
-                </android.support.constraint.ConstraintLayout>
-
+                    android:padding="15dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/my_workout_btn" />
             </FrameLayout>
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        </android.support.constraint.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/ivexercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="142dp"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
 
 
-    </LinearLayout>
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/exercises_btn" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivRemind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="142dp"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/reminders_btn" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivDiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="142dp"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/diet_plan_btn" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="142dp"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+
+
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/about_btn" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>
