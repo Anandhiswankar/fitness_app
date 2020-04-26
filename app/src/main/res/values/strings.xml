@@ -30,7 +30,7 @@
         It helps to improve health and happiness.\n \t\t Yoga is a systematic practice of physical
         exercise, breath control, relaxation, diet control, and positive thinking
         and meditation aimed at developing harmony in the body, mind, and environment.\n"</string>
-            <string name="cardio_text">
+    <string name="cardio_text">
 
                  Cardio exercise is any exercise that
                 raises your heart rate. Face it our bodies
@@ -59,8 +59,9 @@
         sculpting movements with easy-to-follow, fun dance steps. People seem to forget about working
         out during a Zumba session, allowing them to exercise longer, and burn even more calories.
         \n\n\t A typical Zumba session lasts about an hour and incorporates several dance styles, including cumbia,
-        merengue, salsa, reggaeton, mambo, rumba, flamenco, and calypso and Salsaton. The Latin music
+        merengue, salsa, reggaeton, mambo, rumba, flamenco, and calypso and Salsaton.The Latin music
         includes both fast and slow rhythms, allowing for a great cardio workout as well as body sculpting exercises.
         Depending on the instructor, you may even get a taste of belly dancing or hip-hop dancing, too.</string>
+    <string name="gain_weight">Gain Weight</string>
 
 </resources>

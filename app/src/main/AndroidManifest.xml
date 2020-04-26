@@ -10,15 +10,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".my_profile"></activity>
+        <activity android:name=".diet_Plans"></activity>
+        <activity android:name=".diet" />
+        <activity android:name=".my_profile" />
         <activity android:name=".workout" />
         <activity android:name=".add_note" />
         <activity android:name=".exercise" />
         <activity android:name=".yoga_exe" />
         <activity android:name=".cardio_exe" />
         <activity android:name=".zumba_exe" />
-
-
         <activity
             android:name=".Home_page"
             android:screenOrientation="portrait"

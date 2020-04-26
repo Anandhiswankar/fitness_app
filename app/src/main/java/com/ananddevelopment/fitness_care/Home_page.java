@@ -52,8 +52,8 @@ public class Home_page extends AppCompatActivity {
         ivDiet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent intent=new Intent(Home_page.this,diet.class);
-                //startActivity(intent);
+                Intent intent=new Intent(Home_page.this,diet.class);
+                startActivity(intent);
             }
         });ivAbout.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diet_Plans">
+
+    <FrameLayout
+        android:id="@+id/frameLayout14"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout14">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="31dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:id="@+id/frameLayout16"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            app:layout_constraintBottom_toTopOf="@+id/frameLayout22"
+                            app:layout_constraintEnd_toEndOf="@+id/frameLayout22"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@+id/frameLayout22"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameLayout22"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            app:layout_constraintBottom_toTopOf="@+id/frameLayout21"
+                            app:layout_constraintEnd_toEndOf="@+id/frameLayout21"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@+id/frameLayout21"
+                            app:layout_constraintTop_toBottomOf="@+id/frameLayout16">
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameLayout21"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="20dp"
+                            android:paddingTop="10dp"
+                            app:layout_constraintBottom_toTopOf="@+id/frameLayout20"
+                            app:layout_constraintEnd_toEndOf="@+id/frameLayout20"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@+id/frameLayout20"
+                            app:layout_constraintTop_toBottomOf="@+id/frameLayout22">
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameLayout20"
+                            android:layout_width="100dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_height="50dp"
+                            android:paddingTop="10dp"
+                            app:layout_constraintBottom_toTopOf="@+id/frameLayout17"
+                            app:layout_constraintEnd_toEndOf="@+id/frameLayout17"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@+id/frameLayout17"
+                            app:layout_constraintTop_toBottomOf="@+id/frameLayout21">
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameLayout17"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:paddingTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            app:layout_constraintBottom_toTopOf="@+id/frameLayout19"
+                            app:layout_constraintEnd_toEndOf="@+id/frameLayout19"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@+id/frameLayout19"
+                            app:layout_constraintTop_toBottomOf="@+id/frameLayout20">
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameLayout19"
+                            android:layout_width="100dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_height="50dp"
+                            android:paddingTop="10dp"
+                            app:layout_constraintBottom_toTopOf="@+id/frameLayout18"
+                            app:layout_constraintEnd_toEndOf="@+id/frameLayout18"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@+id/frameLayout18"
+                            app:layout_constraintTop_toBottomOf="@+id/frameLayout17">
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameLayout18"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:paddingTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/frameLayout19">
+
+                        </FrameLayout>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>
