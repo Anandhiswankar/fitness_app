@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Weight Lose"
+            android:text="Weight Gain"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
     </FrameLayout>
@@ -92,7 +92,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="20dp"
-                                    android:text="@string/wl_day1_text"
+                                    android:text="@string/wg_day1_text"
                                     android:textColor="#FFFFFF" />
                             </LinearLayout>
 
@@ -134,11 +134,11 @@
                                     android:textSize="18sp" />
 
                                 <TextView
-                                    android:id="@+id/textView16"
+                                    android:id="@+id/textView23"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="20dp"
-                                    android:text="@string/wl_day2_text"
+                                    android:text="@string/wg_day2_text"
                                     android:textColor="#FFFFFF" />
                             </LinearLayout>
 
@@ -179,11 +179,11 @@
                                     android:textSize="18sp" />
 
                                 <TextView
-                                    android:id="@+id/textView17"
+                                    android:id="@+id/textView24"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="20dp"
-                                    android:text="@string/wl_day3_text"
+                                    android:text="@string/wg_day3_text"
                                     android:textColor="#FFFFFF" />
                             </LinearLayout>
 
@@ -224,11 +224,11 @@
                                     android:textSize="18sp" />
 
                                 <TextView
-                                    android:id="@+id/textView18"
+                                    android:id="@+id/textView25"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="20dp"
-                                    android:text="@string/wl_day4_text"
+                                    android:text="@string/wg_day4_text"
                                     android:textColor="#FFFFFF" />
                             </LinearLayout>
 
@@ -269,11 +269,11 @@
                                     android:textSize="18sp" />
 
                                 <TextView
-                                    android:id="@+id/textView19"
+                                    android:id="@+id/textView26"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="20dp"
-                                    android:text="@string/wl_day5_text"
+                                    android:text="@string/wg_day5_text"
                                     android:textColor="#FFFFFF" />
                             </LinearLayout>
 
@@ -314,11 +314,11 @@
                                     android:textSize="18sp" />
 
                                 <TextView
-                                    android:id="@+id/textView21"
+                                    android:id="@+id/textView27"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="20dp"
-                                    android:text="@string/wl_day6_text"
+                                    android:text="@string/wg_day6_text"
                                     android:textColor="#FFFFFF" />
                             </LinearLayout>
 
@@ -359,11 +359,11 @@
                                     android:textSize="18sp" />
 
                                 <TextView
-                                    android:id="@+id/textView20"
+                                    android:id="@+id/textView28"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="20dp"
-                                    android:text="@string/wl_day7_text"
+                                    android:text="@string/wg_day7_text"
                                     android:textColor="#FFFFFF" />
                             </LinearLayout>
 

@@ -63,5 +63,40 @@
         includes both fast and slow rhythms, allowing for a great cardio workout as well as body sculpting exercises.
         Depending on the instructor, you may even get a taste of belly dancing or hip-hop dancing, too.</string>
     <string name="gain_weight">Gain Weight</string>
+    <string name="wl_day1_text">\n
+        8:00am 1 medium apple \n
+        a fev plums or an orange\n
+        10:30am 1/2 bowl of muskmelon\n
+        12:30pm 1 bowl of watermelon\n
+        4:00pm 1 large orange or mosambi\n
+        6:30pm 1 cup  of muskmelon and \n
+        pomegranate salad\n
+        8:30pm 1 watermelon\n
+    </string>
+    <string name="wl_day2_text">add</string>
+    <string name="wl_day3_text">add</string>
+    <string name="wl_day4_text">add</string>
+    <string name="wl_day5_text">add</string>
+    <string name="wl_day6_text">add</string>
+    <string name="wl_day7_text">add</string>
+
+
+    <string name="wg_day1_text">\n
+        8:00am 1 medium apple \n
+        a fev plums or an orange\n
+        10:30am 1/2 bowl of muskmelon\n
+        12:30pm 1 bowl of watermelon\n
+        4:00pm 1 large orange or mosambi\n
+        6:30pm 1 cup  of muskmelon and \n
+        pomegranate salad\n
+        8:30pm 1 watermelon\n
+    </string>
+    <string name="wg_day2_text">add</string>
+    <string name="wg_day3_text">add</string>
+    <string name="wg_day4_text">add</string>
+    <string name="wg_day5_text">add</string>
+    <string name="wg_day6_text">add</string>
+    <string name="wg_day7_text">add</string>
+
 
 </resources>
