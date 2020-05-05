@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".rem1">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="270dp"
+                android:layout_height="70dp"
+                android:ems="10"
+                android:layout_marginBottom="70dp"
+                android:hint="Enter Remainder for"
+                android:inputType="textPersonName"
+                android:padding="25dp"
+                tools:layout_editor_absoluteX="84dp"
+                tools:layout_editor_absoluteY="68dp" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:gravity="center"
+                android:text="TextView"
+                tools:layout_editor_absoluteX="202dp"
+                tools:layout_editor_absoluteY="199dp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_marginTop="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Time"
+                tools:layout_editor_absoluteX="172dp"
+                tools:layout_editor_absoluteY="349dp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Remainder"
+                android:layout_marginTop="50dp"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="525dp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove"
+                tools:layout_editor_absoluteX="179dp"
+                tools:layout_editor_absoluteY="691dp" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>

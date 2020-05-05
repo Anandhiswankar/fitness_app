@@ -45,8 +45,8 @@ public class Home_page extends AppCompatActivity {
         ivRemind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent intent=new Intent(Home_page.this,reminder.class);
-                //startActivity(intent);
+               Intent intent=new Intent(Home_page.this,reminder.class);
+               startActivity(intent);
             }
         });
         ivDiet.setOnClickListener(new View.OnClickListener() {
