@@ -73,38 +73,38 @@
         pomegranate salad\n
         8:30pm 1 watermelon\n
     </string>
-    <string name="wl_day2_text">
+    <string name="wl_day2_text">\n\n
         9:00 AM	1 glass of orange/apple juice \n
         12:30 PM	½ cup of brown rice \n
         ½ cup of sautéed veggies    \n
-        4:00 PM	1 cup of watermelon/few assorted berries \n
+        4:00 PM	1 cup of watermelon/few assorted\n berries
         6:30 PM	1 bowl of GM Soup \n</string>
-    <string name="wl_day3_text">
+    <string name="wl_day3_text">\n
         8:00 AM	1 cup of boiled potatoes \n
         10:30 AM	½ bowl of cucumber \n
-        12:30 PM	1 cup of lettuce, spinach, cucumber, and capsicum \n
-        4:00 PM	½ cup sliced carrots and a glass of lemon juice with a pinch of salt \n
+        12:30 PM	1 cup of lettuce, spinach, cucumber,\n and capsicum
+        4:00 PM	½ cup sliced carrots and a \n glass of lemon\n juice with a pinch of salt \n
         6:30 PM	1 cup boiled broccoli and green peas \n
         8:30 PM	1 cucumber \n
     </string>
     <string name="wl_day4_text">
          8:00 AM	½ bowl of muskmelon \n
         10:30 AM	1 cup of pineapple or pear \n
-        12:30 PM	1 cup of lettuce, spinach, cucumber, and capsicum \n
-        4:00 PM	½ cup sliced carrots and a glass of lemon juice with a pinch of salt \n
+        12:30 PM	1 cup of lettuce, spinach, cucumber,\n and capsicum
+        4:00 PM	½ cup sliced carrots and a \n  glass of lemon \n juice with a pinch of salt \n
         6:30 PM	1 cup of boiled broccoli and green peas \n
         8:30 PM	1 cucumber \n
     </string>
     <string name="wl_day5_text">
         8:00 AM	2 bananas \n
         10:30 AM	1 banana \n
-        12:30 PM	Milkshake (2 bananas + 1 glass of milk + a dash of cocoa powder) \n
+        12:30 PM	Milkshake (2 bananas + 1 glass of milk \t\t \n + a dash of cocoa powder) \n
         4:00 PM	2 bananas \n
         6:30 PM	1 banana \n
         1 glass of milk \n
         8:30 PM	1 glass of milk \n
     </string>
-    <string name="wl_day6_text">
+    <string name="wl_day6_text">\n\n
         9:00 AM	3  \n
         12:30 PM	½ cup of brown rice \n
         Sautéed assorted veggies\n
@@ -112,7 +112,7 @@
         6:30 PM	1 bowl of brown rice 1 tomato  \n
         ½ cup of sautéed veggies \n
     </string>
-    <string name="wl_day7_text">
+    <string name="wl_day7_text"> \n\n
                 9:00 AM	1 glass carrot juice \n
         12:30 PM	½ cup of brown rice + ½ cup of veggies \n
         4:00 PM	1 cup of cucumber slices \n
@@ -123,54 +123,57 @@
 
 
     <string name="wg_day1_text">
-        Breakfast \n
-            Top fruits to gain weight \n
-            For breakfast, have a bowl of oat \n meal with whole milk, \n dried fruits and nuts. \n You can have a glass of orange juice with it.\n
-            Snack \n
-            Have a cereal bar with banana \n as your snack. \n
-        Lunch \n
-            For lunch, it is necessary to have \n heavy food items. You can have \n baked potatoes with tuna with \n a generous amount of grated cheese on top. \n
-            A portion of fruit gelatin and heavy \n dessert can also be eaten with this. \n Also, make sure that you have an \n apple and a few
-        squares of dark chocolate with your lunch.\n
-        Dinner \n
-            For your dinner, you can have a portion of grilled \n chicken with avocado salad and whole \n  grain bread. You can also add olive \n
-        oil to your food. For dessert \n have a bowl of yoghurt and top it \n with seasonal fruits. \n
-        Snack \n
-            Post-dinner snack is a very \n important part of this weight \n gain diet. Have a glass of vanilla \n smoothie made out of whole milk. \n
+        \nBreakfast \n
+            Top fruits to gain weight
+            For breakfast, have a bowl of oat  meal with whole milk, dried fruits and nuts. \n
+            You can have a glass of orange juice with it.\n
+            Snack Have a cereal bar with banana as your snack.\n
+            Lunch For lunch, it is necessary to have heavy food items.\n
+            You can have baked potatoes with tuna with a generous amount of grated cheese on top.\n
+            A portion of fruit gelatin and heavy dessert can also be eaten with this.\n
+            Also, make sure that you have an  apple and a few\n
+            squares of dark chocolate with your lunch Dinner For your dinner, you can have a portion of grilled
+            chicken with avocado salad and whole grain bread. You can also add olive oil to your food.\n
+            For dessert  have a bowl of yoghurt and top it  with seasonal fruits.\n
+            Snack Post-dinner snack is a very important part of this weight gain diet. \n
+            Have a glass of vanilla  smoothie made out of whole milk.
+        \n\n\n
+
+
     </string>
     <string name="wg_day2_text">
-                    Breakfast \n
-            For the second-day breakfast \n have two scrambled eggs with \n whole milk. Serve your breakfast \n with two slices of whole grain \n
-        bread and a glass of fresh \n orange juice.\n
-            Snack \n
-            Have a bowl of yoghurt with peaches.\n
-            Lunch \n
-            Healthy foods to gain weight fast. \n
-            Prepare a plate of chicken pasta salad \n and have it as your lunch on day 2. \n Additionally, have a quarter bar of \n dark chocolate with it. \n
-            Snack \n
-            For an evening snack have a \n sliced avocado with whole grain crackers.\n
-            Dinner \n
-            Meal like stir-fried turkey cooked \n using vegetable oil with onions, tomatoes \n and peppers served with brown \n
-        rice perfect for day 2 dinner. \n With this have a banana for dessert. \n
-            Snack \n
-            Drink a glass of whole milk \n with a cookie for a post-dinner \n snack. \n
+        \nBreakfast \n
+            For the second-day breakfast have two scrambled eggs with whole milk.
+            Serve your breakfast with two slices of whole grain bread and a glass of fresh orange juice.\n
+            Snack Have a bowl of yoghurt with peaches.\n
+            Lunch Healthy foods to gain weight fast.\n
+            Prepare a plate of chicken pasta salad and have it as your lunch on day 2. \n
+            Additionally, have a quarter bar of dark chocolate with it. \n
+            Snack  For an evening snack have a sliced avocado with whole grain crackers.\n
+            Dinner Meal like stir-fried turkey cooked using vegetable oil with onions,\n
+            tomatoes and peppers served with brownrice perfect for day 2 dinner. \n
+            With this have a banana for dessert. \n
+            Snack Drink a glass of whole milk with a cookie for a post-dinner snack. \n
+        \n\n\n
      </string>
     <string name="wg_day3_text">
-            Breakfast \n
-            For day 3 breakfast have a bowl of \n whole grain cereal with whole milk \n and top it with sliced mango. \n
-            Snack \n
-            Have crackers topped with some \n mashed banana for your snack. \n
-            Lunch \n
-            Have the leftover turkey from \n the previous day as your lunch with \n an apple. \n
-            Snack \n
-            In the evening, have a packet \n of trail mix and top it with \n a generous amount of cheese. \n
-            Dinner \n
+           \n Breakfast\n
+            For day 3 breakfast have a bowl of whole grain cereal with whole milk and top it with sliced mango.\n
+            Snack
+            Have crackers topped with some mashed banana for your snack. \n
+            Lunch
+            Have the leftover turkey from the previous day as your lunch with an apple. \n
+            Snack
+            In the evening, have a packet of trail mix and top it with a generous amount of cheese. \n
+            Dinner
             Nuts and dry fruits to gain weight \n
-            For dinner have grilled tilapia with sweet potatoes, \n roasted bell peppers and some couscous. \n Also, have a one glass of fresh orange juice. \n
-            Snack \n
-            Prepare a strawberry smoothie  \nusing whole milk and have it as \n your post-dinner snack. \n
+            For dinner have grilled tilapia with sweet potatoes, roasted bell peppers and some couscous. \n Also, have a one glass of fresh orange juice. \n
+            Snack
+            Prepare a strawberry smoothie using whole milk and have it as \n your post-dinner snack.
+        \n\n\n
        </string>
     <string name="wg_day4_text">
+        \n\n
         For day 4, follow ‘Day 1’ diet but \n  substitute the tuna with beans \n in your lunch and have salmon \n instead of chicken for dinner. \n
      </string>
 
@@ -187,10 +190,10 @@
             For dinner cook some salmon \n and prawns in using vegetable oil \n and serve it with whole wheat pasta  \n and tomato sauce.
             Also, have some \n fresh fruit salad with it. \n
             Snack \n
-            Drink a glass of whole milk with \n a cookie. \n
+            Drink a glass of whole milk with \n a cookie. \n\n\n\n
                 </string>
 
-    <string name="wg_day6_text">
+    <string name="wg_day6_text">\n\n
         Follow the diet of ‘Day 3’ by \n substituting stir-fry leftover seafood \n pasta and salmon for lunch and chicken \n breast for dinner. \n
      </string>
 
@@ -206,7 +209,7 @@
             Dinner \n
             Prepare a salad with lentils, \n mackerel and anchovies, drizzle some olive \n oil on it and have it with whole \n grain bread as your dinner. \n
             Snack \n
-            Drink a banana smoothie made \n using whole milk. \n
+            Drink a banana smoothie made \n using whole milk. \n\n\n\n
     </string>
 
 </resources>

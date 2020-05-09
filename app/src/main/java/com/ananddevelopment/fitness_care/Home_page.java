@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class Home_page extends AppCompatActivity {
@@ -20,12 +22,26 @@ public class Home_page extends AppCompatActivity {
         ivRemind=findViewById(R.id.ivRemind);
         ivDiet=findViewById(R.id.ivDiet);
 
+        Animation right_to_left = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.right_to_left_anim);
+        Animation right_to_left_speed_x = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.right_to_left_speed_x);
+        Animation right_to_left_speed_xx = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.right_to_left_speed_xx);
+        Animation right_to_left_speed_xxx = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.right_to_left_speed_xxx);
+        Animation right_to_left_speed_4x = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.right_to_left_speed_4x);
+
+
+        ivWork.setAnimation(right_to_left);
+        ivexercise.setAnimation(right_to_left_speed_x);
+        ivRemind.setAnimation(right_to_left_speed_xx);
+        ivDiet.setAnimation(right_to_left_speed_xxx);
+        ivAbout.setAnimation(right_to_left_speed_4x);
+
         ivWork.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
                     Intent intent=new Intent(Home_page.this,workout.class);
                     startActivity(intent);
+
 
                 }
                 catch (Exception err)
@@ -40,6 +56,7 @@ public class Home_page extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(Home_page.this,exercise.class);
                 startActivity(intent);
+
             }
         });
         ivRemind.setOnClickListener(new View.OnClickListener() {

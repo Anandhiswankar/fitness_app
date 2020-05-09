@@ -12,6 +12,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".rem1"></activity>
         <activity android:name=".reminder" />
+
+        <activity android:name=".rem2"/>
+        <activity android:name=".rem3"/>
+        <activity android:name=".rem4"/>
+
         <activity
             android:name=".diet_Plans_gain"
             android:screenOrientation="portrait"

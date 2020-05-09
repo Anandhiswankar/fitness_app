@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -20,6 +22,14 @@ Button yoga,cardio,zumba;
         cardio = (Button)findViewById(R.id.cardio_btn);
         zumba = (Button) findViewById(R.id.zumba_btn);
 
+        Animation move_up_x = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_up_x);
+        Animation move_up_xx = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_up_xx);
+        Animation move_up_xxx = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_up_xxx);
+
+
+        yoga.setAnimation(move_up_x);
+        cardio.setAnimation(move_up_xx);
+        zumba.setAnimation(move_up_xxx);
 
         yoga.setOnClickListener(new View.OnClickListener() {
             @Override

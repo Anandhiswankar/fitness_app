@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -24,6 +26,10 @@ public class add_note extends AppCompatActivity {
         setContentView(R.layout.activity_add_notes);
         note_box= findViewById(R.id.note_box);
         save_button= findViewById(R.id.save_button);
+        Animation pop_up = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.pop_up);
+
+        save_button.setAnimation(pop_up);
+
         dbh=new DataBaseHelper(this);
         show();
         save_button.setOnClickListener(new View.OnClickListener() {

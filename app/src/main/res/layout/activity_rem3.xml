@@ -52,15 +52,15 @@
                     android:background="@color/cardview_shadow_start_color">
 
                     <EditText
-                        android:id="@+id/rem1_title"
-                        android:layout_width="252dp"
-                        android:layout_height="59dp"
+                        android:id="@+id/rem_3__titile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/input"
                         android:ems="10"
                         android:hint="Reminder for ?"
                         android:inputType="textPersonName"
                         android:textAlignment="center"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#EAEAEA"
                         android:textColorHint="#FFFFFF"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +76,7 @@
                         android:textColor="#FFFFFF"
                         android:textSize="30sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/rem1_title"
+                        app:layout_constraintEnd_toStartOf="@+id/rem_3__titile"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -95,7 +95,7 @@
 
 
                 <TimePicker
-                    android:id="@+id/rem1_clock"
+                    android:id="@+id/rem3_clock"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:headerBackground="#DC1246"
@@ -121,26 +121,26 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/rem1_save_btn"
+                android:id="@+id/rem3_save_btn"
                 android:layout_width="179dp"
                 android:layout_height="63dp"
                 android:background="@drawable/note_save_btn"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/rem1_del_btn"
+                app:layout_constraintEnd_toStartOf="@+id/rem3_del_btn"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.466" />
 
             <Button
-                android:id="@+id/rem1_del_btn"
+                android:id="@+id/rem3_del_btn"
                 android:layout_width="183dp"
                 android:layout_height="64dp"
                 android:background="@drawable/del_btn"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/rem1_save_btn"
+                app:layout_constraintStart_toEndOf="@+id/rem3_save_btn"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.433" />
         </android.support.constraint.ConstraintLayout>

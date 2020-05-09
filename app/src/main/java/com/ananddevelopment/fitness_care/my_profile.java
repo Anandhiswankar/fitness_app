@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -27,6 +29,10 @@ public class my_profile extends AppCompatActivity {
         U_weight=findViewById(R.id. U_weight);
         U_height=findViewById(R.id.U_height);
         btnsave=findViewById(R.id.btnsave);
+
+        Animation pop_up = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.pop_up);
+
+        btnsave.setAnimation(pop_up);
         show();
         btnsave.setOnClickListener(new View.OnClickListener() {
             @Override
