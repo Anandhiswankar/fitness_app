@@ -52,7 +52,7 @@
                     android:background="@color/cardview_shadow_start_color">
 
                     <EditText
-                        android:id="@+id/rem_2__titile"
+                        android:id="@+id/rem_2__title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/input"
@@ -76,7 +76,7 @@
                         android:textColor="#FFFFFF"
                         android:textSize="30sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/rem_2__titile"
+                        app:layout_constraintEnd_toStartOf="@+id/rem_2__title"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -124,6 +124,7 @@
                 android:id="@+id/rem2_save_btn"
                 android:layout_width="179dp"
                 android:layout_height="63dp"
+                android:onClick="setTimer"
                 android:background="@drawable/note_save_btn"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/rem2_del_btn"

@@ -18,6 +18,10 @@ public class db_userProfile extends SQLiteOpenHelper {
     private static final String col6="Gender";
 
 
+
+
+
+
     db_userProfile(Context context)
     {
         super(context,dbname,null,1);

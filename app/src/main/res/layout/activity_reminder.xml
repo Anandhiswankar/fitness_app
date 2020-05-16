@@ -10,13 +10,15 @@
         android:id="@+id/frameLayout24"
         android:layout_width="0dp"
         android:layout_height="80dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/shade_color"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/ivTask1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -63,11 +65,10 @@
                         android:layout_height="match_parent" />
 
                     <TextView
-                        android:id="@+id/ivTask1"
                         android:layout_width="match_parent"
                         android:layout_height="86dp"
                         android:gravity="center"
-                        android:text="hi"
+                        android:text="1st Reminder"
                         android:textColor="#FFFFFF"
                         android:textSize="24sp" />
                 </FrameLayout>
@@ -92,7 +93,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/time_background"
                         android:gravity="center"
-                        android:text="hi"
+                        android:text="2nd Reminder"
                         android:textColor="#FFFFFF"
                         android:textSize="24sp" />
                 </FrameLayout>
@@ -117,7 +118,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/time_background"
                         android:gravity="center"
-                        android:text="hi"
+                        android:text="3rd Reminder"
                         android:textColor="#FFFFFF"
                         android:textSize="24sp" />
 
@@ -144,7 +145,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/time_background"
                         android:gravity="center"
-                        android:text="hi"
+                        android:text="4th Reminder"
                         android:textColor="#FFFFFF"
                         android:textSize="24sp" />
 

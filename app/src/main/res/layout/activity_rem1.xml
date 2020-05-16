@@ -94,12 +94,21 @@
                 app:layout_constraintTop_toBottomOf="@+id/frameLayout32">
 
 
-                <TimePicker
-                    android:id="@+id/rem1_clock"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:headerBackground="#DC1246"
-                    android:timePickerMode="clock"></TimePicker>
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TimePicker
+                            android:id="@+id/rem1_clock"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:headerBackground="#DC1246"
+                            android:timePickerMode="clock"></TimePicker>
+                    </LinearLayout>
 
 
             </FrameLayout>
@@ -124,6 +133,7 @@
                 android:id="@+id/rem1_save_btn"
                 android:layout_width="179dp"
                 android:layout_height="63dp"
+                android:onClick="setTimer"
                 android:background="@drawable/note_save_btn"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/rem1_del_btn"
@@ -146,4 +156,5 @@
         </android.support.constraint.ConstraintLayout>
 
     </FrameLayout>
+
 </android.support.constraint.ConstraintLayout>

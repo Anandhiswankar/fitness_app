@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class reminder extends AppCompatActivity {
-    TextView ivTask1;
     ImageView rem1,rem2,rem3,rem4;
 
     @Override

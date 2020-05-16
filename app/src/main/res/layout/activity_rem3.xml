@@ -124,6 +124,7 @@
                 android:id="@+id/rem3_save_btn"
                 android:layout_width="179dp"
                 android:layout_height="63dp"
+                android:onClick="setTimer"
                 android:background="@drawable/note_save_btn"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/rem3_del_btn"
