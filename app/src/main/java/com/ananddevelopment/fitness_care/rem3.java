@@ -67,8 +67,9 @@ public class rem3 extends AppCompatActivity {
             cal_Alarm.add(Calendar.DATE, 1);
         }
         Intent i = new Intent(rem3.this, Broadcast.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(rem3.this, 24444, i, 0);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, cal_Alarm.getTimeInMillis(), pendingIntent);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(rem3.this, 0, i, 0);
+        //alarmManager.set(AlarmManager.RTC_WAKEUP, cal_Alarm.getTimeInMillis(), pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,cal_Alarm.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
         save();
 
 

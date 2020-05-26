@@ -5,6 +5,7 @@
 
 
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
 
         android:allowBackup="true"
@@ -75,6 +76,7 @@
             </intent-filter>
         </activity>
         <receiver android:name=".Broadcast"></receiver>
+
     </application>
 
 </manifest>
