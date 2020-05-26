@@ -76,6 +76,9 @@
             </intent-filter>
         </activity>
         <receiver android:name=".Broadcast"></receiver>
+        <receiver android:name=".broadcast2"></receiver>
+        <receiver android:name=".broadcast3"></receiver>
+        <receiver android:name=".broadcast4"></receiver>
 
     </application>
 
