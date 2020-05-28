@@ -30,7 +30,6 @@ public class rem3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rem3);
         remdb = new ReminderDB(this);
-
         rem3_save_btn = findViewById(R.id.rem3_save_btn);
         rem_3__titile = findViewById(R.id.rem_3__titile);
         rem3_clock = findViewById(R.id.rem3_clock);
@@ -42,6 +41,7 @@ public class rem3 extends AppCompatActivity {
             }
         });
         show();
+        rem3_clock.setIs24HourView(false);
         rem3_clock.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
@@ -98,14 +98,36 @@ public class rem3 extends AppCompatActivity {
         String rem = rem_3__titile.getText().toString();
         String hour = String.valueOf(Hour);
         String min  = String.valueOf(Minute);
+        String AM_PM;
+        if(Hour>12){
+            Hour -=12;
+            AM_PM= "PM";
+        }
+        else  if(Hour==0){
+            Hour+=12;
+            AM_PM="AM";
+        }
+        else if(Hour==12){
+            AM_PM="PM";
+        }else {
+            AM_PM="AM";
+        }
+        String min1="";
+        if(Minute<10){
+            min1="0"+Minute;
+        }
+        else min1=String.valueOf(Minute);
+
+        String time=new StringBuilder().append(Hour).append(':').append(min1).append("").append(AM_PM).toString();
+        String amPm=AM_PM;
         if (TextUtils.isEmpty(rem_3__titile.getText())) {
             rem_3__titile.setError("Required...");
             return;
         }
-        Boolean result = remdb.insertData3(rem,hour,min);
+        Boolean result = remdb.insertData3(rem,hour,min,amPm);
         if (result == true)
         {
-            Toast.makeText(this, "Alarm is set to " +hour +": "+min, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Alarm is set to "+time, Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Something Wrong", Toast.LENGTH_SHORT).show();
         }

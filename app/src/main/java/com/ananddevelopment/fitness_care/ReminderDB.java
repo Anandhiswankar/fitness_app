@@ -16,6 +16,7 @@ public class ReminderDB extends SQLiteOpenHelper {
     private static final String col2="rem";
     private static final String col3="hour";
     private static final String col4="min";
+    private static final String col5="amPm";
 
 
     ReminderDB(Context context)
@@ -24,25 +25,52 @@ public class ReminderDB extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table RemData(id integer primary key autoincrement,rem Text,hour integer ,min integer)");
-        db.execSQL("create table RemData2(id integer primary key autoincrement,rem Text,hour integer ,min integer)");
-        db.execSQL("create table RemData3(id integer primary key autoincrement,rem Text,hour integer ,min integer)");
-        db.execSQL("create table RemData4(id integer primary key autoincrement,rem Text,hour integer ,min integer)");
+        db.execSQL("create table RemData(id integer primary key autoincrement,rem Text,hour integer ,min integer,amPm Text)");
+        db.execSQL("create table RemData2(id integer primary key autoincrement,rem Text,hour integer ,min integer,amPm Text)");
+        db.execSQL("create table RemData3(id integer primary key autoincrement,rem Text,hour integer ,min integer,amPm Text)");
+        db.execSQL("create table RemData4(id integer primary key autoincrement,rem Text,hour integer ,min integer,amPm Text)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists " +table);
         db.execSQL("drop table if exists " +table2);
+        db.execSQL("drop table if exists " +table3);
+        db.execSQL("drop table if exists " +table4);
+
+
     }
 
-    public boolean insertData( String rem, String hour,String min)
+    public boolean insertData( String rem, String hour,String min,String amPm)
     {
+        int Hour= Integer.parseInt(hour);
+        int Min= Integer.parseInt(min);
+        String AM_PM;
+        if(Hour>12){
+            Hour -=12;
+            AM_PM= "PM";
+        }
+        else  if(Hour==0){
+            Hour+=12;
+            AM_PM="AM";
+        }
+        else if(Hour==12){
+            AM_PM="PM";
+        }else {
+            AM_PM="AM";
+        }
+        String min1="";
+        if(Min<10){
+            min1="0"+Min;
+        }
+        else min1=String.valueOf(Min);
+        String time=new StringBuilder().append(Hour).append(':').append(min1).append("").append(AM_PM).toString();
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
         cv.put(col2,rem);
-        cv.put(col3,hour);
-        cv.put(col4,min);
+        cv.put(col3,Hour);
+        cv.put(col4,Min);
+        cv.put(col5,amPm);
         db.execSQL("delete from remData");
         long res=db.insert(table,null,cv);
         db.close();
@@ -53,16 +81,38 @@ public class ReminderDB extends SQLiteOpenHelper {
             return true;
         }
     }
-    public boolean insertData2( String rem, String hour,String min)
+    public boolean insertData2( String rem, String hour,String min,String amPm)
     {
+        int Hour= Integer.parseInt(hour);
+        int Min= Integer.parseInt(min);
+        String AM_PM;
+        if(Hour>12){
+            Hour -=12;
+            AM_PM= "PM";
+        }
+        else  if(Hour==0){
+            Hour+=12;
+            AM_PM="AM";
+        }
+        else if(Hour==12){
+            AM_PM="PM";
+        }else {
+            AM_PM="AM";
+        }
+        String min1="";
+        if(Min<10){
+            min1="0"+Min;
+        }
+        else min1=String.valueOf(Min);
+        String time=new StringBuilder().append(Hour).append(':').append(min1).append("").append(AM_PM).toString();
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
         cv.put(col2,rem);
-        cv.put(col3,hour);
-        cv.put(col4,min);
-        db.execSQL("delete from RemData2");
+        cv.put(col3,Hour);
+        cv.put(col4,Min);
+        cv.put(col5,amPm);
+        db.execSQL("delete from remData2");
         long res=db.insert(table2,null,cv);
-
         db.close();
         if(res==-1)
         {
@@ -71,16 +121,38 @@ public class ReminderDB extends SQLiteOpenHelper {
             return true;
         }
     }
-    public boolean insertData3( String rem, String hour,String min)
+    public boolean insertData3( String rem, String hour,String min,String amPm)
     {
+        int Hour= Integer.parseInt(hour);
+        int Min= Integer.parseInt(min);
+        String AM_PM;
+        if(Hour>12){
+            Hour -=12;
+            AM_PM= "PM";
+        }
+        else  if(Hour==0){
+            Hour+=12;
+            AM_PM="AM";
+        }
+        else if(Hour==12){
+            AM_PM="PM";
+        }else {
+            AM_PM="AM";
+        }
+        String min1="";
+        if(Min<10){
+            min1="0"+Min;
+        }
+        else min1=String.valueOf(Min);
+        String time=new StringBuilder().append(Hour).append(':').append(min1).append("").append(AM_PM).toString();
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
         cv.put(col2,rem);
-        cv.put(col3,hour);
-        cv.put(col4,min);
-        db.execSQL("delete from RemData3");
+        cv.put(col3,Hour);
+        cv.put(col4,Min);
+        cv.put(col5,amPm);
+        db.execSQL("delete from remData3");
         long res=db.insert(table3,null,cv);
-
         db.close();
         if(res==-1)
         {
@@ -88,24 +160,38 @@ public class ReminderDB extends SQLiteOpenHelper {
         }else {
             return true;
         }
-    }
-    public Cursor getData3()
-    {
-        SQLiteDatabase db=this.getWritableDatabase();
-        Cursor cursor=db.rawQuery("Select DISTINCT * from " +table3,null);
-        return cursor;
-    }
 
-    public boolean insertData4( String rem, String hour,String min)
-    {
+    }    public Boolean insertData4(String rem, String hour, String min, String amPm) {
+        int Hour= Integer.parseInt(hour);
+        int Min= Integer.parseInt(min);
+        String AM_PM;
+        if(Hour>12){
+            Hour -=12;
+            AM_PM= "PM";
+        }
+        else  if(Hour==0){
+            Hour+=12;
+            AM_PM="AM";
+        }
+        else if(Hour==12){
+            AM_PM="PM";
+        }else {
+            AM_PM="AM";
+        }
+        String min1="";
+        if(Min<10){
+            min1="0"+Min;
+        }
+        else min1=String.valueOf(Min);
+        String time=new StringBuilder().append(Hour).append(':').append(min1).append("").append(AM_PM).toString();
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
         cv.put(col2,rem);
-        cv.put(col3,hour);
-        cv.put(col4,min);
-        db.execSQL("delete from RemData4");
+        cv.put(col3,Hour);
+        cv.put(col4,Min);
+        cv.put(col5,amPm);
+        db.execSQL("delete from remData4");
         long res=db.insert(table4,null,cv);
-
         db.close();
         if(res==-1)
         {
@@ -113,14 +199,10 @@ public class ReminderDB extends SQLiteOpenHelper {
         }else {
             return true;
         }
+
     }
-    public Integer DeleteData3(String id)
-    {
-        SQLiteDatabase db=this.getWritableDatabase();
-        db.execSQL("delete from RemData3");
-        int i=db.delete(table3,"id=?",new String[]{id});
-        return i;
-    }
+
+
 
     public Cursor getData()
     {
@@ -134,6 +216,13 @@ public class ReminderDB extends SQLiteOpenHelper {
         Cursor cursor=db.rawQuery("Select DISTINCT * from " +table2,null);
         return cursor;
     }
+    public Cursor getData3()
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        Cursor cursor=db.rawQuery("Select DISTINCT * from " +table3,null);
+        return cursor;
+    }
+
     public Cursor getData4()
     {
         SQLiteDatabase db=this.getWritableDatabase();
@@ -156,6 +245,13 @@ public class ReminderDB extends SQLiteOpenHelper {
         int i=db.delete(table2,"id=?",new String[]{id});
         return i;
     }
+    public Integer DeleteData3(String id)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        db.execSQL("delete from RemData3");
+        int i=db.delete(table3,"id=?",new String[]{id});
+        return i;
+    }
 
     public Integer DeleteData4(String id)
     {
@@ -164,9 +260,6 @@ public class ReminderDB extends SQLiteOpenHelper {
         int i=db.delete(table4,"id=?",new String[]{id});
         return i;
     }
-
-
-
 
 
 }

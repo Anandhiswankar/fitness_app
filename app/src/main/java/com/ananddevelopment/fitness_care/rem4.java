@@ -41,6 +41,7 @@ public class rem4 extends AppCompatActivity {
             }
         });
         show();
+        rem4_clock.setIs24HourView(false);
         rem4_clock.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
@@ -94,24 +95,42 @@ public class rem4 extends AppCompatActivity {
     }
     private void save ()
     {
-
         String rem = rem_4__title.getText().toString();
         String hour = String.valueOf(Hour);
-        String min= String.valueOf(Minute);
+        String min  = String.valueOf(Minute);
+        String AM_PM;
+        if(Hour>12){
+            Hour -=12;
+            AM_PM= "PM";
+        }
+        else  if(Hour==0){
+            Hour+=12;
+            AM_PM="AM";
+        }
+        else if(Hour==12){
+            AM_PM="PM";
+        }else {
+            AM_PM="AM";
+        }
+        String min1="";
+        if(Minute<10){
+            min1="0"+Minute;
+        }
+        else min1=String.valueOf(Minute);
 
+        String time=new StringBuilder().append(Hour).append(':').append(min1).append("").append(AM_PM).toString();
+        String amPm=AM_PM;
         if (TextUtils.isEmpty(rem_4__title.getText())) {
             rem_4__title.setError("Required...");
             return;
         }
-        Boolean result = remdb.insertData4(rem,hour,min);
+        Boolean result = remdb.insertData4(rem,hour,min,amPm);
         if (result == true)
         {
-            Toast.makeText(this, "Alarm is set to " +hour +": "+min, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Alarm is set to "+time, Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Something Wrong", Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     public void Delete()

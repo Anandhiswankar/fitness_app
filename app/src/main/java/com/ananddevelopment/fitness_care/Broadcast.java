@@ -1,6 +1,4 @@
 package com.ananddevelopment.fitness_care;
-
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
@@ -16,27 +14,15 @@ import android.support.v4.app.NotificationManagerCompat;
 import android.widget.Toast;
 
 public class Broadcast extends BroadcastReceiver {
-
-
-
         public void onReceive(Context context, Intent intent) {
-
             Toast.makeText(context, "Hey welcome", Toast.LENGTH_SHORT).show();
-
             Vibrator vibrator= (Vibrator) context.getSystemService(context.VIBRATOR_SERVICE);
             vibrator.vibrate(2000);
-
-
-
             Uri notification= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-
             Ringtone r=RingtoneManager.getRingtone(context,notification);
             r.play();
 
-
-
             String msg = "Time To Go GYM";
-
 
 
             createnoticahannel(context);
@@ -48,9 +34,7 @@ public class Broadcast extends BroadcastReceiver {
                     .setAutoCancel(true);
 
             NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(context);
-
             notificationManagerCompat.notify(0,builder.build());
-
         }
 
 

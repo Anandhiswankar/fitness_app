@@ -5,7 +5,6 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -42,12 +41,15 @@ public class rem1 extends AppCompatActivity {
             }
         });
         show();
+        rem1_clock.setIs24HourView(false);
         rem1_clock.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
+
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
                Hour = hourOfDay;
                Minute = minute;
-            }
+               }
+
         });
     }
 
@@ -77,6 +79,7 @@ public class rem1 extends AppCompatActivity {
         }
         public void show() {
             Cursor cursor=remdb.getData();
+
             StringBuffer stringBuffer=new StringBuffer();    // this code get data from cursor
             if (cursor!=null && cursor.getCount()>0)
             {
@@ -85,6 +88,7 @@ public class rem1 extends AppCompatActivity {
                     stringBuffer.append(""+cursor.getString(1)+"\n");
                     stringBuffer.append("\n");
                 }
+
                 rem1_title.setText(stringBuffer.toString());   //display this list in textview
                 Toast.makeText(this,"Loading.." ,Toast.LENGTH_SHORT).show();
 
@@ -99,14 +103,36 @@ public class rem1 extends AppCompatActivity {
             String rem = rem1_title.getText().toString();
             String hour = String.valueOf(Hour);
             String min  = String.valueOf(Minute);
-            if (TextUtils.isEmpty(rem1_title.getText())) {
+                String AM_PM;
+                if(Hour>12){
+                    Hour -=12;
+                    AM_PM= "PM";
+                }
+                else  if(Hour==0){
+                    Hour+=12;
+                    AM_PM="AM";
+                }
+                else if(Hour==12){
+                    AM_PM="PM";
+                }else {
+                    AM_PM="AM";
+                }
+                String min1="";
+                if(Minute<10){
+                    min1="0"+Minute;
+                }
+                else min1=String.valueOf(Minute);
+
+                String time=new StringBuilder().append(Hour).append(':').append(min1).append("").append(AM_PM).toString();
+                String amPm=AM_PM;
+                if (TextUtils.isEmpty(rem1_title.getText())) {
                 rem1_title.setError("Required...");
                 return;
             }
-            Boolean result = remdb.insertData(rem,hour,min);
+            Boolean result = remdb.insertData(rem,hour,min,amPm);
             if (result == true)
             {
-                Toast.makeText(this, "Alarm is set to " +hour +": "+min, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Alarm is set to "+time, Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "Something Wrong", Toast.LENGTH_SHORT).show();
                 }
@@ -123,8 +149,5 @@ public class rem1 extends AppCompatActivity {
         } catch (Exception err) {
             Toast.makeText(this,"error:" + err.toString(),Toast.LENGTH_SHORT).show();
         }
-
     }
-
-
-    }
+}
