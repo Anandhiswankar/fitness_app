@@ -4,6 +4,7 @@ import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -14,15 +15,33 @@ import android.support.v4.app.NotificationManagerCompat;
 import android.widget.Toast;
 
 public class Broadcast extends BroadcastReceiver {
+
+
         public void onReceive(Context context, Intent intent) {
-            Toast.makeText(context, "Hey welcome", Toast.LENGTH_SHORT).show();
+
+           ReminderDB remdb = new ReminderDB(context);
+
+            Cursor cursor=remdb.getData();
+
+            StringBuffer stringBuffer=new StringBuffer();
+
+            if (cursor!=null && cursor.getCount()>0)
+            {
+                while (cursor.moveToNext())
+                {
+                    stringBuffer.append(""+cursor.getString(1)+"\n");
+                    stringBuffer.append("\n");
+                }
+            }
+
+            Toast.makeText(context, "Reminder for "+stringBuffer.toString(), Toast.LENGTH_SHORT).show();
             Vibrator vibrator= (Vibrator) context.getSystemService(context.VIBRATOR_SERVICE);
             vibrator.vibrate(2000);
             Uri notification= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
             Ringtone r=RingtoneManager.getRingtone(context,notification);
             r.play();
 
-            String msg = "Time To Go GYM";
+            String msg ="Reminder for "+stringBuffer.toString();
 
 
             createnoticahannel(context);
@@ -57,6 +76,9 @@ public class Broadcast extends BroadcastReceiver {
         }
     }
 
+    public void show() {
+
+    }
 
 
 }

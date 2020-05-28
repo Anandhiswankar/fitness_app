@@ -43,6 +43,7 @@ public class reminder extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(reminder.this,rem1.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -51,6 +52,7 @@ public class reminder extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(reminder.this,rem2.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -59,6 +61,7 @@ public class reminder extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(reminder.this,rem3.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -67,6 +70,8 @@ public class reminder extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(reminder.this,rem4.class);
                 startActivity(intent);
+
+                finish();
             }
         });
 
@@ -74,58 +79,78 @@ public class reminder extends AppCompatActivity {
     }
     public  void  show1()
     {
-        Cursor cursor=remdb.getData();
-        StringBuffer stringBuffer=new StringBuffer();    // this code get data from cursor
-        if (cursor!=null && cursor.getCount()>0)
-        {
-            while (cursor.moveToNext())
+        try {
+            Cursor cursor=remdb.getData();
+            StringBuffer stringBuffer=new StringBuffer();    // this code get data from cursor
+            if (cursor!=null && cursor.getCount()>0)
             {
-                stringBuffer.append("\n");
-                stringBuffer.append(""+cursor.getString(2)+":"+cursor.getString(3)+""+cursor.getString(4)+"\n");
+                while (cursor.moveToNext())
+                {
+                    stringBuffer.append("\n");
+                    stringBuffer.append(""+cursor.getString(2)+":"+cursor.getString(3)+""+cursor.getString(4)+"\n");
+                }
+                rem1Text.setText(stringBuffer.toString());   //display this list in textview
             }
-        rem1Text.setText(stringBuffer.toString());   //display this list in textview
         }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
     }
     public  void  show2()
     {
-        Cursor cursor=remdb.getData2();
-        StringBuffer stringBuffer=new StringBuffer();    // this code get data from cursor
-        if (cursor!=null && cursor.getCount()>0)
-        {
-            while (cursor.moveToNext())
-            {
-                stringBuffer.append("\n");
-                stringBuffer.append(""+cursor.getString(2)+":"+cursor.getString(3)+""+cursor.getString(4)+"\n");
+        try {
+            Cursor cursor = remdb.getData2();
+            StringBuffer stringBuffer = new StringBuffer();    // this code get data from cursor
+            if (cursor != null && cursor.getCount() > 0) {
+                while (cursor.moveToNext()) {
+                    stringBuffer.append("\n");
+                    stringBuffer.append("" + cursor.getString(2) + ":" + cursor.getString(3) + "" + cursor.getString(4) + "\n");
+                }
+                rem2Text.setText(stringBuffer.toString());   //display this list in textview
             }
-            rem2Text.setText(stringBuffer.toString());   //display this list in textview
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
         }
     }
     public  void  show3()
     {
-        Cursor cursor=remdb.getData3();
-        StringBuffer stringBuffer=new StringBuffer();    // this code get data from cursor
-        if (cursor!=null && cursor.getCount()>0)
-        {
-            while (cursor.moveToNext())
-            {
-                stringBuffer.append("\n");
-                stringBuffer.append(""+cursor.getString(2)+":"+cursor.getString(3)+""+cursor.getString(4)+"\n");
+        try {
+            Cursor cursor = remdb.getData3();
+            StringBuffer stringBuffer = new StringBuffer();    // this code get data from cursor
+            if (cursor != null && cursor.getCount() > 0) {
+                while (cursor.moveToNext()) {
+                    stringBuffer.append("\n");
+                    stringBuffer.append("" + cursor.getString(2) + ":" + cursor.getString(3) + "" + cursor.getString(4) + "\n");
+                }
+                rem3Text.setText(stringBuffer.toString());   //display this list in textview
             }
-            rem3Text.setText(stringBuffer.toString());   //display this list in textview
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
         }
     }
     public  void  show4()
     {
-        Cursor cursor=remdb.getData4();
-        StringBuffer stringBuffer=new StringBuffer();    // this code get data from cursor
-        if (cursor!=null && cursor.getCount()>0)
-        {
-            while (cursor.moveToNext())
-            {
-                stringBuffer.append("\n");
-                stringBuffer.append(""+cursor.getString(2)+":"+cursor.getString(3)+""+cursor.getString(4)+"\n");
+        try {
+            Cursor cursor = remdb.getData4();
+            StringBuffer stringBuffer = new StringBuffer();    // this code get data from cursor
+            if (cursor != null && cursor.getCount() > 0) {
+                while (cursor.moveToNext()) {
+                    stringBuffer.append("\n");
+                    stringBuffer.append("" + cursor.getString(2) + ":" + cursor.getString(3) + "" + cursor.getString(4) + "\n");
+                }
+                rem4Text.setText(stringBuffer.toString());   //display this list in textview
             }
-            rem4Text.setText(stringBuffer.toString());   //display this list in textview
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
         }
     }
+
 }

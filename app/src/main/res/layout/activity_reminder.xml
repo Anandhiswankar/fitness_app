@@ -10,7 +10,6 @@
         android:id="@+id/frameLayout24"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:layout_marginTop="32dp"
         android:background="@drawable/shade_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

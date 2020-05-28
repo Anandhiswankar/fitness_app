@@ -141,6 +141,7 @@ public class rem1 extends AppCompatActivity {
     public void Delete()
     {
         try {
+
             rem1_title.setText("");
             String id = String.valueOf(rem1_title.getId());
             int res = remdb.DeleteData(id);
