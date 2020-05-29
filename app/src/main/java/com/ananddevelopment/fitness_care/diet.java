@@ -45,8 +45,9 @@ public class diet extends AppCompatActivity {
 
     public  void  customDialog()
     {
-        AlertDialog.Builder builder=new AlertDialog.Builder(this,R.style.ThemeOverlay_AppCompat_Dark);
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
         builder.setCancelable(false);
+        builder.setTitle("Alert");
         builder.setMessage("All information given here is Google based. Before following any of the " +
                 "diet Consult your Doctor first.");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -57,6 +58,7 @@ public class diet extends AppCompatActivity {
         });
         AlertDialog dialog=builder.create();
         dialog.show();
+        /*
         WindowManager.LayoutParams lp=new WindowManager.LayoutParams();
         lp.copyFrom(dialog.getWindow().getAttributes());
         lp.width=700;
@@ -64,6 +66,6 @@ public class diet extends AppCompatActivity {
         lp.x=-300;
         lp.y=300;
         dialog.getWindow().setAttributes(lp);
-
+*/
     }
 }
