@@ -77,8 +77,8 @@ public class Home_page extends AppCompatActivity {
         ivAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent=new Intent(Home_page.this,about.class);
-                //startActivity(intent);
+                Intent intent=new Intent(Home_page.this,about.class);
+                startActivity(intent);
             }
         });
 
