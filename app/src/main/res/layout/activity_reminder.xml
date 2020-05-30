@@ -68,7 +68,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="86dp"
                         android:gravity="center"
-                        android:text="1st Reminder"
+                        android:text="Set Reminder"
                         android:textColor="#FFFFFF"
                         android:textSize="24sp" />
                 </FrameLayout>
@@ -94,7 +94,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/time_background"
                         android:gravity="center"
-                        android:text="2nd Reminder"
+                        android:text="Set Reminder"
                         android:textColor="#FFFFFF"
                         android:textSize="24sp" />
                 </FrameLayout>
@@ -120,7 +120,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/time_background"
                         android:gravity="center"
-                        android:text="3rd Reminder"
+                        android:text="Set Reminder"
                         android:textColor="#FFFFFF"
                         android:textSize="24sp" />
 
@@ -148,7 +148,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/time_background"
                         android:gravity="center"
-                        android:text="4th Reminder"
+                        android:text="Set Reminder"
                         android:textColor="#FFFFFF"
                         android:textSize="24sp" />
 

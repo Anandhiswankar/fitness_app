@@ -8,6 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class exercise extends AppCompatActivity {
 
@@ -26,6 +27,7 @@ Button yoga,cardio,zumba;
         Animation move_up_xx = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_up_xx);
         Animation move_up_xxx = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_up_xxx);
 
+        Toast.makeText(this, "New Exercise in next update with Steps", Toast.LENGTH_SHORT).show();
 
         yoga.setAnimation(move_up_x);
         cardio.setAnimation(move_up_xx);

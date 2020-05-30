@@ -89,12 +89,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:padding="5dp"
-                        android:textColor="#ffffff"
-                        android:textSize="20sp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginBottom="70dp"
-                        android:text="Matoshree Developers" />
+                        android:padding="5dp"
+                        android:text="Matoshree Developers \n\nanandhiswankar3@gmail.com"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
                 </FrameLayout>
 
                 <FrameLayout
@@ -164,30 +164,37 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView38"
+                        android:id="@+id/policy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/input"
                         android:padding="5dp"
+                        android:text="Privacy Policies"
+                        android:textAlignment="center"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
-                        android:layout_marginLeft="15dp"
-                        android:text="Privacy Policies" />
+                        android:textStyle="bold|italic" />
                 </FrameLayout>
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView39"
+                        android:id="@+id/tandc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/input"
                         android:padding="5dp"
+                        android:text="Use Terms"
+                        android:textAlignment="center"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
-                        android:layout_marginLeft="15dp"
-                        android:text="Use Terms" />
+                        android:textStyle="bold|italic" />
                 </FrameLayout>
 
 
