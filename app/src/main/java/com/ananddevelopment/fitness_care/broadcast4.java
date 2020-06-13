@@ -10,8 +10,8 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Vibrator;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import android.widget.Toast;
 
 public class broadcast4 extends Broadcast {
@@ -40,14 +40,14 @@ public class broadcast4 extends Broadcast {
         String msg = "Reminder for: "+stringBuffer.toString();
 
         Vibrator vibrator= (Vibrator) context.getSystemService(context.VIBRATOR_SERVICE);
-        vibrator.vibrate(2000);
+        //vibrator.vibrate(2000);
 
 
 
         Uri notification= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
         Ringtone r=RingtoneManager.getRingtone(context,notification);
-        r.play();
+       // r.play();
 
 
 
@@ -65,7 +65,15 @@ public class broadcast4 extends Broadcast {
 
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(context);
 
-        notificationManagerCompat.notify(0,builder.build());
+        //notificationManagerCompat.notify(0,builder.build());
+
+        if(stringBuffer.toString()!="")
+        {
+            vibrator.vibrate(2000);
+            notificationManagerCompat.notify(0,builder.build());
+            r.play();
+
+        }
 
     }
 

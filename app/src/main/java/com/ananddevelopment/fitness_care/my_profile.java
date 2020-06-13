@@ -1,7 +1,7 @@
 package com.ananddevelopment.fitness_care;
 
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,11 +17,16 @@ public class my_profile extends AppCompatActivity {
     Button btnsave;
     db_userProfile userProfileDb;
 
+    iniads ads = new iniads();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_profile);
+
+
+        ads.initads(this);
+
         userProfileDb=new db_userProfile(this);
         U_name=findViewById(R.id.U_name);
         U_gender=findViewById(R.id.U_gender);
@@ -74,6 +79,9 @@ public class my_profile extends AppCompatActivity {
     }
 
     private void save() {
+
+        ads.showads(this);
+
         String Name =U_name .getText().toString();
         String Age = U_age.getText().toString();
         String Height = U_height.getText().toString();

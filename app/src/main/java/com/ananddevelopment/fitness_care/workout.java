@@ -1,18 +1,30 @@
 package com.ananddevelopment.fitness_care;
 
         import android.content.Intent;
-        import android.support.v7.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
         import android.os.Bundle;
+        import android.renderscript.Sampler;
         import android.view.View;
         import android.view.animation.Animation;
         import android.view.animation.AnimationUtils;
         import android.widget.Button;
         import android.widget.ImageView;
 
+        import com.google.android.gms.ads.AdRequest;
+        import com.google.android.gms.ads.AdView;
+        import com.google.android.gms.ads.InterstitialAd;
+        import com.google.android.gms.ads.MobileAds;
+        import com.google.android.gms.ads.initialization.InitializationStatus;
+        import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+        import com.ananddevelopment.fitness_care.adsid.*;
+
 public class workout extends AppCompatActivity {
 
 
     Button add_note,my_health;
+    private InterstitialAd interstitialAd_workout;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +33,20 @@ public class workout extends AppCompatActivity {
 
         Animation pop_up = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.pop_up);
 
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
 
+            }
+        });
+
+        AdView down = findViewById(R.id.ads_workout_bottom);
+
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+
+        down.loadAd(adRequest);
 
         add_note = (Button) findViewById(R.id.goto_add_note);
 
@@ -55,7 +80,6 @@ public class workout extends AppCompatActivity {
 
 
     }
-
 
 
 }

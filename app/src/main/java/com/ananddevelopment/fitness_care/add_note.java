@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -20,6 +20,8 @@ public class add_note extends AppCompatActivity {
     EditText note_box;
     Button save_button;
 
+    iniads ads = new iniads();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,12 @@ public class add_note extends AppCompatActivity {
         Animation pop_up = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.pop_up);
 
         save_button.setAnimation(pop_up);
+
+
+
+        ads.initads(this);
+
+
 
         dbh=new DataBaseHelper(this);
         show();
@@ -56,6 +64,9 @@ public class add_note extends AppCompatActivity {
         }
 
     }private void save() {
+
+        ads.showads(this);
+
         String task=note_box.getText().toString();
         if(TextUtils.isEmpty(note_box.getText()))
         {

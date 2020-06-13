@@ -3,7 +3,7 @@ package com.ananddevelopment.fitness_care;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -11,6 +11,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class reminder extends AppCompatActivity {
     ImageView rem1,rem2,rem3,rem4;
@@ -36,7 +39,13 @@ public class reminder extends AppCompatActivity {
         show3();
         show4();
 
+        AdView down = findViewById(R.id.ads_rem_bottom);
 
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+
+        down.loadAd(adRequest);
 
         rem1.setOnClickListener(new View.OnClickListener() {
             @Override

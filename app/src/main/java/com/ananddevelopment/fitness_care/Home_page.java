@@ -2,22 +2,52 @@ package com.ananddevelopment.fitness_care;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class Home_page extends AppCompatActivity {
     ImageView ivWork,ivexercise,ivAbout,ivRemind,ivDiet;
     DataBaseHelper dbh;
 
+    private AdView about_panel_bottom_ads;
+    private InterstitialAd interstitialAd_about;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+
+            }
+        });
+
+
+
+        about_panel_bottom_ads = findViewById(R.id.home_page_ads);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        about_panel_bottom_ads.loadAd(adRequest);
+
+
+
+
+
         ivWork = findViewById(R.id.ivWork);
         ivexercise = findViewById(R.id.ivexercise);
         ivAbout = findViewById(R.id.ivAbout);
@@ -41,6 +71,9 @@ public class Home_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
+
+
+
                     Intent intent = new Intent(Home_page.this, workout.class);
                     startActivity(intent);
 
@@ -54,14 +87,21 @@ public class Home_page extends AppCompatActivity {
         ivexercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 Intent intent = new Intent(Home_page.this, exercise.class);
                 startActivity(intent);
+
+
 
             }
         });
         ivRemind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
                 Intent intent = new Intent(Home_page.this, reminder.class);
                 startActivity(intent);
             }
@@ -77,6 +117,9 @@ public class Home_page extends AppCompatActivity {
         ivAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
                 Intent intent=new Intent(Home_page.this,about.class);
                 startActivity(intent);
             }
@@ -99,6 +142,9 @@ public class Home_page extends AppCompatActivity {
                 .setNegativeButton("NO", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+
+
+
                         dialog.cancel();
                     }
                 });

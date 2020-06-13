@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -47,17 +47,28 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/ads_about_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="10dp"
+                    app:adSize="BANNER"
+                    app:adUnitId="@string/banner_ads_id"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
+
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_marginTop="20dp"
                         android:id="@+id/textView22"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="left"
                         android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
                         android:padding="5dp"
                         android:text="Fitness Care"
                         android:textColor="#ffffff"
@@ -73,8 +84,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="left"
-                        android:padding="5dp"
                         android:layout_marginLeft="15dp"
+                        android:padding="5dp"
                         android:text="v1.0"
                         android:textColor="#ffffff"
                         android:textSize="20sp" />
@@ -122,12 +133,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:padding="5dp"
-                        android:textColor="#ffffff"
-                        android:textSize="20sp"
                         android:layout_marginLeft="15dp"
-                        android:text="Anand Hiswankar" />
+                        android:padding="5dp"
+                        android:text="Anand Hiswankar"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
                 </FrameLayout>
+
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -137,13 +149,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:padding="5dp"
-                        android:textColor="#ffffff"
-                        android:textSize="20sp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginBottom="70dp"
-                        android:text="Kalyani Tarke " />
+                        android:padding="5dp"
+                        android:text="Kalyani Tarke "
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
                 </FrameLayout>
+
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -154,11 +167,12 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:padding="15dp"
-                        android:textColor="#ffffff"
-                        android:textSize="21sp"
                         android:scaleType="fitXY"
-                        android:text="Legal" />
+                        android:text="Legal"
+                        android:textColor="#ffffff"
+                        android:textSize="21sp" />
                 </FrameLayout>
+
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -175,8 +189,10 @@
                         android:textAlignment="center"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
-                        android:textStyle="bold|italic" />
+                        android:textStyle="bold|italic"
+                        tools:ignore="RtlCompat" />
                 </FrameLayout>
+
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -194,11 +210,19 @@
                         android:textAlignment="center"
                         android:textColor="#ffffff"
                         android:textSize="20sp"
-                        android:textStyle="bold|italic" />
+                        android:textStyle="bold|italic"
+                        tools:ignore="RtlCompat" />
                 </FrameLayout>
-
-
-
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/ads_about_down"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="10dp"
+                    app:adSize="BANNER"
+                    app:adUnitId="@string/banner_ads_id"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
 
 
             </LinearLayout>
@@ -206,4 +230,4 @@
     </FrameLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

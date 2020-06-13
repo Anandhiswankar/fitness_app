@@ -5,7 +5,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -23,12 +23,15 @@ public class rem1 extends AppCompatActivity {
     TimePicker rem1_clock;
     public int Hour, Minute;
     ReminderDB remdb;
+    iniads ads = new iniads();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rem1);
         remdb = new ReminderDB(this);
+
+        ads.initads(this);
 
         rem1_save_btn = findViewById(R.id.rem1_save_btn);
         rem1_title = findViewById(R.id.rem1_title);
@@ -51,6 +54,8 @@ public class rem1 extends AppCompatActivity {
                }
 
         });
+
+
     }
 
         public void setTimer (View v){
@@ -74,6 +79,9 @@ public class rem1 extends AppCompatActivity {
             //alarmManager.set(AlarmManager.RTC_WAKEUP, cal_Alarm.getTimeInMillis(), pendingIntent);
             alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,cal_Alarm.getTimeInMillis(),AlarmManager.INTERVAL_DAY,pendingIntent);
             save();
+
+
+
 
 
         }
@@ -100,6 +108,7 @@ public class rem1 extends AppCompatActivity {
 
         private void save ()
             {
+                ads.showads(this);
             String rem = rem1_title.getText().toString();
             String hour = String.valueOf(Hour);
             String min  = String.valueOf(Minute);
@@ -140,7 +149,14 @@ public class rem1 extends AppCompatActivity {
 
     public void Delete()
     {
+        ads.showads(this);
         try {
+            AlarmManager   alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            Intent i = new Intent(rem1.this, Broadcast.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(rem1.this, 0, i, 0);
+            //alarmManager.set(AlarmManager.RTC_WAKEUP, cal_Alarm.getTimeInMillis(), pendingIntent);
+            alarmManager.cancel(pendingIntent);
+
 
             rem1_title.setText("");
             String id = String.valueOf(rem1_title.getId());

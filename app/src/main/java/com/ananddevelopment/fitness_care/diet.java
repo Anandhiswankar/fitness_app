@@ -2,8 +2,10 @@ package com.ananddevelopment.fitness_care;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -11,9 +13,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class diet extends AppCompatActivity {
 
     Button btnGain,btnlose;
+
+    AdView down;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +29,14 @@ public class diet extends AppCompatActivity {
         btnlose=findViewById(R.id.btnlose);
         btnGain=findViewById(R.id.btnGain);
         Animation pop_up = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.pop_up);
+
+
+        down = findViewById(R.id.ads_diet_bottom);
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        down.loadAd(adRequest);
+
 
         btnlose.setAnimation(pop_up);
         btnGain.setAnimation(pop_up);

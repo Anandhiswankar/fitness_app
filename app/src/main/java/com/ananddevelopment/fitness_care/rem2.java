@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -24,10 +24,15 @@ public class rem2 extends AppCompatActivity {
     public int Hour, Minute;
     ReminderDB remdb;
 
+    iniads ads = new iniads();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rem2);
+
+        ads.initads(this);
+
         remdb = new ReminderDB(this);
 
         rem2_save_btn = findViewById(R.id.rem2_save_btn);
@@ -96,6 +101,9 @@ public class rem2 extends AppCompatActivity {
     }
     private void save ()
     {
+        ads.showads(this);
+
+
         String rem = rem_2__title.getText().toString();
         String hour = String.valueOf(Hour);
         String min  = String.valueOf(Minute);
@@ -136,7 +144,16 @@ public class rem2 extends AppCompatActivity {
 
     public void Delete()
     {
+
+        ads.showads(this);
         try {
+
+            AlarmManager   alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            Intent i = new Intent(rem2.this, broadcast2.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(rem2.this, 0, i, 0);
+            //alarmManager.set(AlarmManager.RTC_WAKEUP, cal_Alarm.getTimeInMillis(), pendingIntent);
+            alarmManager.cancel(pendingIntent);
+
             rem_2__title.setText("");
             String id = String.valueOf(rem_2__title.getId());
             int res = remdb.DeleteData2(id);

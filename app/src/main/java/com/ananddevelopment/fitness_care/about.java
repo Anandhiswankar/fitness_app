@@ -1,22 +1,35 @@
 package com.ananddevelopment.fitness_care;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class about extends AppCompatActivity {
 
     TextView policy,tandc,a1,a2,a3,a4,a5,a6,a7;
-
+    AdView ads_about_top,ads_about_bottom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
+
+        ads_about_top = findViewById(R.id.ads_about_top);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        ads_about_top.loadAd(adRequest);
+
+        ads_about_bottom = findViewById(R.id.ads_about_down);
+        AdRequest adRequest2 = new AdRequest.Builder().build();
+        ads_about_bottom.loadAd(adRequest2);
 
         Animation pop = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.pop_up);
 

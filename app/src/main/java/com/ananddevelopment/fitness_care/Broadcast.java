@@ -10,8 +10,8 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Vibrator;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import android.widget.Toast;
 
 public class Broadcast extends BroadcastReceiver {
@@ -34,14 +34,16 @@ public class Broadcast extends BroadcastReceiver {
                 }
             }
 
-            Toast.makeText(context, "Reminder for "+stringBuffer.toString(), Toast.LENGTH_SHORT).show();
+
             Vibrator vibrator= (Vibrator) context.getSystemService(context.VIBRATOR_SERVICE);
-            vibrator.vibrate(2000);
+
             Uri notification= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
             Ringtone r=RingtoneManager.getRingtone(context,notification);
-            r.play();
 
-            String msg ="Reminder for "+stringBuffer.toString();
+
+
+                Toast.makeText(context, "Reminder for " + stringBuffer.toString(), Toast.LENGTH_SHORT).show();
+                String msg = "Reminder for " + stringBuffer.toString();
 
 
             createnoticahannel(context);
@@ -53,7 +55,16 @@ public class Broadcast extends BroadcastReceiver {
                     .setAutoCancel(true);
 
             NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(context);
-            notificationManagerCompat.notify(0,builder.build());
+
+            if(stringBuffer.toString()!="")
+            {
+                vibrator.vibrate(2000);
+                notificationManagerCompat.notify(0,builder.build());
+                r.play();
+
+            }
+
+
         }
 
 

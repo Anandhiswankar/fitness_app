@@ -1,7 +1,7 @@
 package com.ananddevelopment.fitness_care;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -10,14 +10,29 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class exercise extends AppCompatActivity {
 
 Button yoga,cardio,zumba;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
+
+
+
+
+        AdView down = findViewById(R.id.ads_einfo_bottom);
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+
+        down.loadAd(adRequest);
 
         yoga = (Button)findViewById(R.id.yoga_btn);
         cardio = (Button)findViewById(R.id.cardio_btn);
